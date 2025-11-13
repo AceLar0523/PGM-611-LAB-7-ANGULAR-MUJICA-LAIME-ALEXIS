@@ -1,0 +1,26 @@
+<div class="lista-container card">
+  <h2>Lista de Palabras</h2>
+
+  @if (palabras().length === 0) {
+    <p class="empty-list">No hay palabras en la lista.</p>
+  }
+
+  @if (palabras().length > 0) {
+    <ol>
+      @for (palabra of palabras(); track $index) {
+        <li>
+          <span class="palabra-texto">{{ $index + 1 }}. {{ palabra }}</span>
+
+          <div class="actions">
+            <button class="btn-edit" (click)="editarPalabra($index)">
+              Editar
+            </button>
+            <button class="btn-delete" (click)="eliminarPalabra($index)">
+              Eliminar
+            </button>
+          </div>
+        </li>
+      }
+    </ol>
+  }
+</div>

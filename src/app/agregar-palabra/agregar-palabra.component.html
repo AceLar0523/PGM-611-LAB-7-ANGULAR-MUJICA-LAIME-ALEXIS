@@ -1,0 +1,12 @@
+<div class="agregar-container card">
+  <h2>Agregar Nueva Palabra</h2>
+  <div class="input-group">
+    <input
+      type="text"
+      [(ngModel)]="nuevaPalabra"
+      (keydown.enter)="agregarPalabra()"
+      placeholder="Escribe una palabra..."
+    />
+    <button (click)="agregarPalabra()">Agregar</button>
+  </div>
+</div>

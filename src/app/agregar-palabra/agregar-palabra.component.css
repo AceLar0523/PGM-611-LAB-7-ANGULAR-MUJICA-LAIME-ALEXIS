@@ -1,0 +1,25 @@
+/* Aplicamos el estilo de tarjeta del padre */
+@import '../app.css';
+
+.input-group {
+  display: flex;
+  gap: 0.5rem;
+}
+
+input[type='text'] {
+  flex-grow: 1; /* El input toma el espacio disponible */
+  padding: 0.75rem;
+  font-size: 1rem;
+  border: 1px solid #bdc3c7;
+  border-radius: 4px;
+}
+
+button {
+  background-color: #3498db;
+  color: white;
+  white-space: nowrap; /* Evita que el texto del botón se rompa */
+}
+
+button:hover {
+  background-color: #2980b9;
+}
